@@ -5,29 +5,28 @@ import com.badlogic.gdx.math.Vector2;
 
 public class Block {
     private Vector2 pos;
-    private float health;
     private Color color;
+    private float health;
 
-    public Block(Vector2 pos, float health, Color color) {
+    public Block(Vector2 pos, Color color, float health) {
         this.pos = pos;
-        this.health = health;
         this.color = color;
+        this.health = health;
     }
 
     public Vector2 getPos() {
         return pos;
     }
 
-    public float getHealth() {
-        return health;
-    }
-
-    public void changeHealth(float by) {
-        health = health + by;
+    public void setPos(Vector2 newPos) {
+        pos = newPos;
     }
 
     public Color getColor() {
         return color;
     }
 
+    public void setColor(Color newColor) {
+        color = newColor;
+    }
 }
